@@ -1,0 +1,83 @@
+rack:
+  - version: '~> 1.3'
+    ruby: ['>= 1.8.7', '< 3.0']
+  - version: '~> 2.0'
+    ruby: '>= 2.3.0'
+  - version: '~> 3.0'
+    ruby: '>= 2.4.0'
+    gem:
+      rackup: '>= 0'
+      # thin: false
+sinatra:
+  - version: '~> 1.0'
+    ruby: ['>= 1.8.7', '< 3.0']
+    gem:
+      rack: '< 2.0'
+  - version: '~> 2.0'
+    ruby: '>= 2.3.0'
+  - version: '~> 3.0'
+    ruby: '>= 2.6.0'
+rails:
+  - version: '~> 3.2.0'
+    ruby: ['>= 1.8.7', '< 2.4']
+    gem:
+      bundler: '< 2.0'
+  - version: '~> 4.0.0'
+    ruby: ['>= 1.9.3', '< 2.3']
+    gem:
+      bundler: '< 2.0'
+  - version: '~> 4.1.0'
+    ruby: ['>= 1.9.3', '< 2.4']
+    gem:
+      bundler: '< 2.0'
+  - version: '~> 4.2.0'
+    ruby: ['>= 1.9.3', '< 2.5']
+    gem:
+      loofah: '~> 2.19.1' # solve Nokogiri::HTML4 exception
+      bundler: '< 2.0'
+  - version: '~> 5.0.0'
+    ruby: ['>= 2.2.2', '< 2.5']
+    gem:
+      loofah: '~> 2.19.1' # solve Nokogiri::HTML4 exception
+  - version: '~> 5.1.0'
+    ruby: ['>= 2.2.2', '< 2.6']
+  - version: '~> 5.2.0'
+    ruby: ['>= 2.2.2', '< 2.7']
+  - version: '~> 6.0.0'
+    # 2.7 excluded because stringio defaults to 3.0
+    ruby: ['>= 2.5', '< 2.7']
+    gem:
+      # superclass mismatch for class StringIO (TypeError)
+      stringio: '< 3.0'
+  - version: '~> 6.1.0'
+    # 3.3 has a bug: https://bugs.ruby-lang.org/issues/20085
+    ruby: ['>= 2.5', '< 3.3']
+  - version: '~> 7.0.0'
+    # 3.3 has a bug: https://bugs.ruby-lang.org/issues/20085
+    ruby: ['>= 2.7', '< 3.3']
+  - version: '~> 7.1.0'
+    # 3.3 has a bug: https://bugs.ruby-lang.org/issues/20085
+    ruby: ['>= 2.7', '< 3.3']
+grape:
+  - version: ['~> 1.0', '< 1.3']
+    ruby: ['>= 2.0', '< 3.0']
+    gem:
+      activesupport: '< 7.0'
+      rack: '< 2.0'
+  - version: ['~> 1.3', '< 1.6']
+    ruby: ['>= 2.4', '< 3.0']
+    gem:
+      activesupport: '< 7.0'
+      rack: '< 3.0'
+  - version: ['~> 1.6', '< 1.8']
+    ruby: ['>= 2.5']
+    gem:
+      rackup: '>= 0'
+  - version: ['~> 1.8', '< 2.0']
+    ruby: ['>= 2.6']
+    gem:
+      rackup: '>= 0'
+  - version: '~> 2.0'
+    ruby: ['>= 2.6']
+    gem:
+      rackup: '>= 0'
