@@ -55,6 +55,10 @@ rails:
   - version: '~> 7.0.0'
     # 3.3 has a bug: https://bugs.ruby-lang.org/issues/20085
     ruby: ['>= 2.7', '< 3.3']
+    gem:
+      sinatra: '>= 0.a'
+      grape: '>= 0.a'
+      pry: '> 0'
   - version: '~> 7.1.0'
     # 3.3 has a bug: https://bugs.ruby-lang.org/issues/20085
     ruby: ['>= 2.7', '< 3.3']
